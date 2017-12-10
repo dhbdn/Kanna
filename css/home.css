@@ -1,0 +1,556 @@
+@charset"utf-8";
+body{
+    min-width:1280px;
+}
+body.noScroll{
+    overflow: hidden;
+    height:100%;
+}
+/*背景*/
+/*#bg{*/
+   /**/
+/*}*/
+
+/*#bg .bg1{*/
+    /*width:100%;*/
+    /*height:1080px;*/
+   /**/
+/*}*/
+/*#bg .bg2{*/
+    /*width:100%;*/
+    /*height:1080px;*/
+   /**/
+/*}*/
+/*#bg .bg3{*/
+    /*width:100%;*/
+    /*height:534px;*/
+    /*background: url("../img/bg3.jpg")no-repeat center center;*/
+/*}*/
+/*首屏*/
+.section{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+#section1{
+    overflow: hidden;
+    position: relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:1080px;
+    background: url("../img/bg1.jpg")no-repeat center center;
+}
+#section1 .logo{
+     position: absolute;
+     top:20px;
+     left:30px;
+     transform: translateX(-200px);
+     opacity:0;
+     animation:move 2s ease-in-out forwards;
+}
+@keyframes move {
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+ #section1 .logo img{
+    float:left;
+}
+ #section1 .logo .img2 {
+    width:90px;
+    height: 90px;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+ #section1 .toIndex{
+    position: absolute;
+    top:25px;
+    right:-200px;
+    background:url("../img/goindex.png")no-repeat;
+    opacity: 0;
+    animation:toIndex 2s linear forwards;
+}
+@keyframes toIndex {
+    to{
+        right:20px;
+        opacity: 1;
+    }
+}
+ #section1 .toIndex a{
+    display: inline-block;
+    width:177px;
+    height:45px;
+    background: rgba(0,0,0,.3) ;
+    border-radius: 20px;
+}
+ #section1 .toIndex:hover a{
+    background:rgba(0,0,0,.05);
+}
+ #section1 .mass{
+    position: absolute;
+    top:110px;
+    right:-400px;
+    width:340px;
+    height:521px;
+    background: url("../img/mass.png")no-repeat center center;
+    opacity:0;
+    animation:mass 2s ease-in-out forwards;
+}
+@keyframes mass {
+    to{
+        right:80px;
+        opacity: 1;
+    }
+}
+ #section1 .path{
+    position: absolute;
+    top:800px;
+    right:135px;
+    opacity: 0;
+    animation:code 2s ease-in-out forwards;
+}
+@keyframes code {
+    to{
+        top:650px;
+        opacity: 1;
+    }
+}
+ #section1 .path .qrcode{
+    position: relative;
+    float: left;
+    width: 130px;
+    height:130px;
+    background:rgba(255,255,255,.5) url("../img/qrcode.png")no-repeat center center/120px 120px;
+    border-radius: 5px;
+}
+ #section1 .path .qrcode .line{
+    position: absolute;
+    top:5px;
+    left:-3px;
+    width:140px;
+    height:10px;
+    animation:infi 4s linear infinite alternate;
+}
+@keyframes infi {
+    0%{
+        top:5px;
+    }
+    50%{
+        top:120px;
+    }
+    100%{
+        top:0;
+    }
+}
+ #section1 .path .downLoad{
+    float: left;
+}
+ #section1 .path .downLoad .img{
+    width:205px;
+    height:60px;
+    cursor: pointer;
+}
+ #section1 .path .downLoad .img img{
+    display: block;
+    width:100%;
+    height:100%;
+    margin-left:10px;
+}
+ #section1 .path .downLoad .andr img{
+    margin-top: 10px;
+    opacity:0.8;
+    transition: .3s;
+}
+ #section1 .path .downLoad .andr img:hover{
+    opacity:1;
+}
+ #section1 .down{
+    position: absolute;
+    bottom:240px;
+    left:50%;
+    width:30px;
+    height:70px;
+    background: url("../img/dBtn.png")no-repeat center center;
+    animation:down 1.3s linear infinite alternate;
+    cursor: pointer;
+}
+@keyframes down {
+    to{
+        bottom:200px;
+    }
+}
+ #section1 .videoBtn{
+    position: absolute;
+    top:450px;
+    right:330px;
+    width:165px;
+    height:120px;
+    opacity: 0;
+    background: url("../img/videoBtn.png")no-repeat center center;
+    animation: show 2s linear forwards;
+    cursor: pointer;
+}
+@keyframes show {
+    to{
+        opacity:1
+    }
+}
+ #section1 .videoBtn img{
+    display: block;
+    margin:3px 0 0 48px;
+}
+ #section1 .video{
+    display: none;
+}
+ #section1 #video{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:800px;
+    height:450px;
+    margin:auto;
+    border:2px solid #b69476;
+}
+ #section1 #video .close,.newInfo .new_main .pop_windows .pop_main .close{
+    position: absolute;
+    top:0;
+    right:-43px;
+    width:40px;
+    height:40px;
+     background:rgb(119, 77, 40);
+    background:url("../img/close.png")no-repeat center center/cover;
+    transform: rotate(0deg);
+    transition:.3s;
+    cursor: pointer;
+}
+ #section1 #video .close:hover,.newInfo .new_main .pop_windows .pop_main .close:hover{
+    transform: rotate(180deg);
+}
+/*newInfo*/
+#section2{
+    width:100%;
+    height:620px;
+    background: url("../img/bg2.jpg")no-repeat center center;
+}
+.newInfo{
+    position: relative;
+    z-index: 99;
+}
+.newInfo .title{
+    position: relative;
+    top:0;
+    width:800px;
+    height:150px;
+    margin:0 auto;
+    background: url("../img/newinfo/newinf.png")no-repeat center center;
+    transition:.5s;
+}
+.newInfo .title.hide{
+    top:80px;
+}
+.newInfo .new_main .infoList{
+    width:1280px;
+    margin:0 auto;
+}
+.newInfo .new_main .infoList ul li.list{
+    position: relative;
+    top:0;
+    float:left;
+    width:418px;
+    height:196px;
+    margin:0 5px 15px 0;
+    transition:.3s;
+    cursor: pointer;
+}
+.newInfo .new_main .infoList ul li.list.hide{
+    top:80px;
+}
+.newInfo .new_main .infoList ul li.list.l1{
+    background:url("../img/newinfo/p1.png") no-repeat 0 15px;
+}
+.newInfo .new_main .infoList ul li.list.l2{
+    background:url("../img/newinfo/p2.png") no-repeat 0 15px;
+}
+.newInfo .new_main .infoList ul li.list.l3{
+    background:url("../img/newinfo/p3.png") no-repeat 0 15px;
+}
+.newInfo .new_main .infoList ul li.list.l4{
+    background:url("../img/newinfo/p4.png") no-repeat 0 15px;
+}
+.newInfo .new_main .infoList ul li.list.l5{
+    background:url("../img/newinfo/p5.png") no-repeat 0 15px;
+}
+.newInfo .new_main .infoList ul li.list.l6{
+    background:url("../img/newinfo/p6.png") no-repeat 0 15px;
+}
+
+.newInfo .new_main .infoList ul li.list i{
+    position: absolute;
+    display: none;
+    background:#a57c47;
+}
+.newInfo .new_main .infoList ul li.list .i1,.newInfo .new_main .infoList ul li.list .i3{
+    width:0;
+    height:2px;
+}
+.newInfo .new_main .infoList ul li.list .i2,.newInfo .new_main .infoList ul li.list .i4{
+    width:2px;
+    height:0;
+}
+.newInfo .new_main .infoList ul li.list .i1{
+    top:9px;
+    left:9px;
+}
+
+.newInfo .new_main .infoList ul li.list .i2{
+    top:9px;
+    right:7px;
+}
+.newInfo .new_main .infoList ul li.list .i3{
+     bottom:9px;
+     right:7px;
+ }
+.newInfo .new_main .infoList ul li.list .i4{
+    bottom:9px;
+    left:7px;
+}
+.newInfo .new_main .infoList ul li.list:hover{
+    background-position: 0 0;
+}
+.newInfo .new_main .infoList ul li.list:hover i{
+    display: block;
+}
+.newInfo .new_main .infoList ul li.list:hover .i1{
+     animation: i1 .1s 0s linear forwards ;
+ }
+.newInfo .new_main .infoList ul li.list:hover .i2{
+    animation: i2 .15s .1s linear forwards ;
+}
+.newInfo .new_main .infoList ul li.list:hover .i3{
+    animation: i3 .15s .25s linear forwards ;
+}
+.newInfo .new_main .infoList ul li.list:hover .i4{
+    animation: i4 .2s .4s linear forwards ;
+}
+/*i动画*/
+@keyframes i1{
+    to{
+        width:400px;
+    }
+}
+@keyframes i3 {
+    to{
+        width:402px;
+    }
+}
+@keyframes i2{
+    to{
+        height:178px;
+    }
+}
+@keyframes i4 {
+    to{
+       height:178px;
+    }
+}
+/*pop_windows*/
+.newInfo .new_main .pop_windows{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    background: rgba(0,0,0,.5);
+}
+.newInfo .new_main .pop_windows .pop_main{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:1180px;
+    height:735px;
+    margin:auto;
+}
+.newInfo .new_main .pop_windows .pop_main .btn{
+    position: absolute;
+    top:50%;
+    width:46px;
+    height:18px;
+    margin-top:-9px;
+    cursor: pointer;
+}
+.newInfo .new_main .pop_windows .pop_main .left{
+    left:0;
+    background:url("../img/newinfo/toleft.png")no-repeat center center;
+}
+.newInfo .new_main .pop_windows .pop_main .left:hover{
+    animation: left linear 1s infinite;
+}
+@keyframes left {
+    50%{
+        left:15px;
+    }
+    100%{
+        left:0;
+    }
+}
+.newInfo .new_main .pop_windows .pop_main .right{
+     right:0;
+     background:url("../img/newinfo/toright.png")no-repeat center center;
+ }
+.newInfo .new_main .pop_windows .pop_main .right:hover{
+    animation: right linear 1s infinite;
+}
+@keyframes right {
+    50%{
+        right:15px;
+    }
+    100%{
+        right:0;
+    }
+}
+.newInfo .new_main .pop_windows .pop_main ul li{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    margin:-50px -60px;
+}
+
+.newInfo .new_main .pop_windows .pop_main .close{
+    top:78px;
+    right:50px;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content{
+    position: relative;
+    overflow:hidden;
+    width:440px;
+    height:315px;
+    margin:240px 550px;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .contentTxt{
+    position: absolute;
+    top:0;
+    left:0;
+    width:410px;
+    font-size: 16px;
+    line-height: 35px;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .contentTxt .boldRed{
+    font-weight: bold;
+    color: #e5402a;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .contentTxt .boldBlack{
+    font-weight: bold;
+    color: #000;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .contentTxt .normal{
+    color: #666;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .contentTxt .mBottom{
+    margin-bottom: 35px;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .scroll{
+    position: absolute;
+    top:0;
+    right:0;
+    height:100%;
+    width:8px;
+    background: #e2e2e2;
+    border-radius: 4px;
+}
+.newInfo .new_main .pop_windows .pop_main ul li .content .scroll .scrollBar{
+    position: absolute;
+    top:0;
+    left:0;
+    width:8px;
+    background: rgba(0,0,0,.5);
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*游戏特色*/
+#section3{
+    position: relative;
+    width:100%;
+    height:750px;
+    background: url("../img/bg2.jpg")no-repeat center center;
+}
+#section3 .title{
+    position: relative;
+    width:800px;
+    height:150px;
+    margin:0 auto;
+    padding-top:100px;
+    background:url("../img/game/game_title.png")no-repeat center center;
+}
+#section3 .pic{
+    position:relative;
+    width:1130px;
+    height:439px;
+    margin:0 auto;
+    transform-style:preserve-3d ;
+    perspective: 800px;
+}
+#section3 .pic ul{
+
+}
+#section3 .pic ul li{
+    position: absolute;
+    top:0;
+    left:50%;
+    width:774px;
+    height:438px;
+    margin-left:-387px;
+    transform:rotateY(0deg) translate3D(0,0,-300px);
+    transition:transform .5s;
+}
+#section3 .pic ul li img{
+    display: block;
+    width:100%;
+    height:100%;
+    opacity:.6;
+}
+#section3 .pic ul li.mid img{
+    opacity:1;
+}
+#section3 .pic ul li.left{
+    transform:rotateY(30deg) translate3D(-104px, 0px ,-300px);
+    z-index: 10;
+}
+#section3 .pic ul li.mid{
+    transform:rotateY(0deg) translate3D(0,0,0);
+    z-index: 20;
+}
+#section3 .pic ul li.right{
+    transform:rotateY(-30deg) translate3D(103px, 0px ,-300px);
+    z-index: 10;
+}
+#section3 .pic .btn{
+    position: absolute;
+    top:50%;
+    width:42px;
+    height:82px;
+    margin-top:-41px;
+    cursor:pointer;
+}
+#section3 .pic .leftBtn{
+    left:-42px;
+    background: url("../img/game/left.png")no-repeat center center;
+}
+#section3 .pic .rightBtn{
+    right:-42px;
+    background: url("../img/game/right.png")no-repeat center center;
+}
+
+
+
+
+
